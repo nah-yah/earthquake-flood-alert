@@ -61,5 +61,20 @@
       "flood_threshold": 1656.5,
       "prediction_window": "7 days"
     }
+  },
+  {
+    "alert_id": "EQ-20260212114922-1",
+    "hazard_type": "earthquake",
+    "level": "LOW",
+    "level_value": 1,
+    "location": "32 km SW of Ovalle, Chile",
+    "probability": 0.3666666666666667,
+    "message": "Low earthquake risk detected in 32 km SW of Ovalle, Chile. Probability: 36.7%. Monitor conditions.",
+    "timestamp": "2026-02-12T11:49:22.341983",
+    "metadata": {
+      "expected_magnitude": 6.2,
+      "expected_depth": 36.885,
+      "prediction_window": "24 hours"
+    }
   }
 ]
