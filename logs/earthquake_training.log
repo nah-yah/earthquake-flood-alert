@@ -1,0 +1,204 @@
+2026-02-05 18:58:58,582 - __main__ - INFO - ============================================================
+2026-02-05 18:58:58,679 - __main__ - INFO - EARTHQUAKE MODEL TRAINING
+2026-02-05 18:58:58,761 - __main__ - INFO - ============================================================
+2026-02-05 18:58:58,880 - __main__ - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 18:58:58,920 - __main__ - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-05 18:59:01,988 - __main__ - INFO - Loaded 9,217 records
+2026-02-05 18:59:02,079 - __main__ - INFO - Using 64 features
+2026-02-05 18:59:02,358 - __main__ - INFO - Target distribution:
+target
+0    8628
+1     589
+Name: count, dtype: int64
+2026-02-05 19:00:26,048 - __main__ - INFO - ============================================================
+2026-02-05 19:00:26,054 - __main__ - INFO - EARTHQUAKE MODEL TRAINING
+2026-02-05 19:00:26,056 - __main__ - INFO - ============================================================
+2026-02-05 19:00:26,057 - __main__ - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 19:00:26,058 - __main__ - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-05 19:00:27,627 - __main__ - INFO - Loaded 9,217 records
+2026-02-05 19:00:27,631 - __main__ - INFO - Using 64 features
+2026-02-05 19:00:27,636 - __main__ - INFO - Target distribution:
+target
+0    8628
+1     589
+Name: count, dtype: int64
+2026-02-05 19:00:27,784 - __main__ - INFO - Train set: 7,373 samples (0.076 positive rate)
+2026-02-05 19:00:27,787 - __main__ - INFO - Test set: 1,844 samples (0.014 positive rate)
+2026-02-05 19:13:07,009 - __main__ - INFO - ============================================================
+2026-02-05 19:13:07,010 - __main__ - INFO - EARTHQUAKE MODEL TRAINING
+2026-02-05 19:13:07,011 - __main__ - INFO - ============================================================
+2026-02-05 19:13:07,791 - __main__ - INFO - Loaded 9,217 records from earthquake_features.csv
+2026-02-05 19:13:07,804 - __main__ - INFO - Using 59 NUMERIC features:
+2026-02-05 19:13:07,806 - __main__ - INFO -   1. latitude
+2026-02-05 19:13:07,806 - __main__ - INFO -   2. longitude
+2026-02-05 19:13:07,807 - __main__ - INFO -   3. depth
+2026-02-05 19:13:07,807 - __main__ - INFO -   4. mag
+2026-02-05 19:13:07,808 - __main__ - INFO -   5. year
+2026-02-05 19:13:07,808 - __main__ - INFO -   6. month
+2026-02-05 19:13:07,809 - __main__ - INFO -   7. day
+2026-02-05 19:13:07,809 - __main__ - INFO -   8. hour
+2026-02-05 19:13:07,810 - __main__ - INFO -   9. day_of_week
+2026-02-05 19:13:07,810 - __main__ - INFO -   10. day_of_year
+2026-02-05 19:13:07,810 - __main__ - INFO -   ... and 49 more
+2026-02-05 19:13:40,547 - __main__ - INFO - ============================================================
+2026-02-05 19:13:40,548 - __main__ - INFO - EARTHQUAKE MODEL TRAINING
+2026-02-05 19:13:40,548 - __main__ - INFO - ============================================================
+2026-02-05 19:13:41,429 - __main__ - INFO - Loaded 9,217 records from earthquake_features.csv
+2026-02-05 19:13:41,443 - __main__ - INFO - Using 59 NUMERIC features:
+2026-02-05 19:13:41,444 - __main__ - INFO -   1. latitude
+2026-02-05 19:13:41,445 - __main__ - INFO -   2. longitude
+2026-02-05 19:13:41,446 - __main__ - INFO -   3. depth
+2026-02-05 19:13:41,447 - __main__ - INFO -   4. mag
+2026-02-05 19:13:41,447 - __main__ - INFO -   5. year
+2026-02-05 19:13:41,448 - __main__ - INFO -   6. month
+2026-02-05 19:13:41,450 - __main__ - INFO -   7. day
+2026-02-05 19:13:41,450 - __main__ - INFO -   8. hour
+2026-02-05 19:13:41,450 - __main__ - INFO -   9. day_of_week
+2026-02-05 19:13:41,451 - __main__ - INFO -   10. day_of_year
+2026-02-05 19:13:41,453 - __main__ - INFO -   ... and 49 more
+2026-02-05 19:13:41,510 - __main__ - INFO - Train: 7,373 samples (0.076 pos rate)
+2026-02-05 19:13:41,512 - __main__ - INFO - Test: 1,844 samples (0.014 pos rate)
+2026-02-05 19:13:49,260 - __main__ - INFO - Training GradientBoosting model...
+2026-02-05 19:14:26,703 - __main__ - INFO - Test ROC-AUC: 0.4642
+2026-02-05 19:14:26,704 - __main__ - INFO - 
+Classification Report:
+2026-02-05 19:14:26,779 - __main__ - INFO -                       precision    recall  f1-score   support
+
+No Significant Quake       0.99      1.00      0.99      1819
+   Significant Quake       0.00      0.00      0.00        25
+
+            accuracy                           0.99      1844
+           macro avg       0.49      0.50      0.50      1844
+        weighted avg       0.97      0.99      0.98      1844
+
+2026-02-05 20:25:46,297 - __main__ - INFO - ============================================================
+2026-02-05 20:25:46,301 - __main__ - INFO - EARTHQUAKE MODEL TRAINING
+2026-02-05 20:25:46,303 - __main__ - INFO - ============================================================
+2026-02-05 20:25:46,943 - __main__ - INFO - Loaded 9,217 records from earthquake_features.csv
+2026-02-05 20:25:46,955 - __main__ - INFO - Using 59 NUMERIC features:
+2026-02-05 20:25:46,955 - __main__ - INFO -   1. latitude
+2026-02-05 20:25:46,955 - __main__ - INFO -   2. longitude
+2026-02-05 20:25:46,960 - __main__ - INFO -   3. depth
+2026-02-05 20:25:46,960 - __main__ - INFO -   4. mag
+2026-02-05 20:25:46,962 - __main__ - INFO -   5. year
+2026-02-05 20:25:46,962 - __main__ - INFO -   6. month
+2026-02-05 20:25:46,962 - __main__ - INFO -   7. day
+2026-02-05 20:25:46,962 - __main__ - INFO -   8. hour
+2026-02-05 20:25:46,965 - __main__ - INFO -   9. day_of_week
+2026-02-05 20:25:46,965 - __main__ - INFO -   10. day_of_year
+2026-02-05 20:25:46,965 - __main__ - INFO -   ... and 49 more
+2026-02-05 20:25:46,990 - __main__ - INFO - Train: 7,373 samples (0.076 pos rate)
+2026-02-05 20:25:46,993 - __main__ - INFO - Test: 1,844 samples (0.014 pos rate)
+2026-02-05 20:25:50,685 - __main__ - INFO - Training GradientBoosting model...
+2026-02-05 20:26:13,204 - __main__ - INFO - Test ROC-AUC: 0.4642
+2026-02-05 20:26:13,206 - __main__ - INFO - 
+Classification Report:
+2026-02-05 20:26:13,239 - __main__ - INFO -                       precision    recall  f1-score   support
+
+No Significant Quake       0.99      1.00      0.99      1819
+   Significant Quake       0.00      0.00      0.00        25
+
+            accuracy                           0.99      1844
+           macro avg       0.49      0.50      0.50      1844
+        weighted avg       0.97      0.99      0.98      1844
+
+2026-02-05 23:02:39,791 - __main__ - INFO - ============================================================
+2026-02-05 23:02:39,802 - __main__ - INFO - EARTHQUAKE MODEL TRAINING
+2026-02-05 23:02:39,802 - __main__ - INFO - ============================================================
+2026-02-05 23:02:40,287 - __main__ - INFO - Loaded 9,217 records from earthquake_features.csv
+2026-02-05 23:02:40,295 - __main__ - INFO - Using 59 NUMERIC features:
+2026-02-05 23:02:40,295 - __main__ - INFO -   1. latitude
+2026-02-05 23:02:40,295 - __main__ - INFO -   2. longitude
+2026-02-05 23:02:40,306 - __main__ - INFO -   3. depth
+2026-02-05 23:02:40,306 - __main__ - INFO -   4. mag
+2026-02-05 23:02:40,309 - __main__ - INFO -   5. year
+2026-02-05 23:02:40,310 - __main__ - INFO -   6. month
+2026-02-05 23:02:40,313 - __main__ - INFO -   7. day
+2026-02-05 23:02:40,313 - __main__ - INFO -   8. hour
+2026-02-05 23:02:40,313 - __main__ - INFO -   9. day_of_week
+2026-02-05 23:02:40,313 - __main__ - INFO -   10. day_of_year
+2026-02-05 23:02:40,318 - __main__ - INFO -   ... and 49 more
+2026-02-05 23:02:40,345 - __main__ - INFO - Train: 7,373 samples (0.076 pos rate)
+2026-02-05 23:02:40,345 - __main__ - INFO - Test: 1,844 samples (0.014 pos rate)
+2026-02-05 23:02:44,737 - __main__ - INFO - Training GradientBoosting model...
+2026-02-05 23:03:12,827 - __main__ - INFO - Test ROC-AUC: 0.4642
+2026-02-05 23:03:12,829 - __main__ - INFO - 
+Classification Report:
+2026-02-05 23:03:12,916 - __main__ - INFO -                       precision    recall  f1-score   support
+
+No Significant Quake       0.99      1.00      0.99      1819
+   Significant Quake       0.00      0.00      0.00        25
+
+            accuracy                           0.99      1844
+           macro avg       0.49      0.50      0.50      1844
+        weighted avg       0.97      0.99      0.98      1844
+
+2026-02-05 23:04:15,864 - __main__ - INFO - ============================================================
+2026-02-05 23:04:15,864 - __main__ - INFO - EARTHQUAKE MODEL TRAINING
+2026-02-05 23:04:15,864 - __main__ - INFO - ============================================================
+2026-02-05 23:04:16,160 - __main__ - INFO - Loaded 9,217 records from earthquake_features.csv
+2026-02-05 23:04:16,160 - __main__ - INFO - Using 59 NUMERIC features:
+2026-02-05 23:04:16,160 - __main__ - INFO -   1. latitude
+2026-02-05 23:04:16,160 - __main__ - INFO -   2. longitude
+2026-02-05 23:04:16,176 - __main__ - INFO -   3. depth
+2026-02-05 23:04:16,176 - __main__ - INFO -   4. mag
+2026-02-05 23:04:16,178 - __main__ - INFO -   5. year
+2026-02-05 23:04:16,178 - __main__ - INFO -   6. month
+2026-02-05 23:04:16,180 - __main__ - INFO -   7. day
+2026-02-05 23:04:16,180 - __main__ - INFO -   8. hour
+2026-02-05 23:04:16,182 - __main__ - INFO -   9. day_of_week
+2026-02-05 23:04:16,182 - __main__ - INFO -   10. day_of_year
+2026-02-05 23:04:16,184 - __main__ - INFO -   ... and 49 more
+2026-02-05 23:04:16,201 - __main__ - INFO - Train: 7,373 samples (0.076 pos rate)
+2026-02-05 23:04:16,203 - __main__ - INFO - Test: 1,844 samples (0.014 pos rate)
+2026-02-05 23:04:19,100 - __main__ - INFO - Training GradientBoosting model...
+2026-02-05 23:04:41,106 - __main__ - INFO - Test ROC-AUC: 0.4642
+2026-02-05 23:04:41,106 - __main__ - INFO - 
+Classification Report:
+2026-02-05 23:04:41,147 - __main__ - INFO -                       precision    recall  f1-score   support
+
+No Significant Quake       0.99      1.00      0.99      1819
+   Significant Quake       0.00      0.00      0.00        25
+
+            accuracy                           0.99      1844
+           macro avg       0.49      0.50      0.50      1844
+        weighted avg       0.97      0.99      0.98      1844
+
+2026-02-08 15:40:24,390 - __main__ - INFO - 
+Training complete!
+2026-02-08 15:48:40,409 - __main__ - INFO - 
+Training complete!
+2026-02-08 16:05:46,666 - __main__ - INFO - 
+Training complete!
+2026-02-08 16:19:57,627 - __main__ - INFO - 
+Training complete!
+2026-02-08 16:32:17,057 - __main__ - INFO - 
+Training complete!
+2026-02-08 17:31:59,828 - __main__ - INFO - 
+Training complete!
+2026-02-08 17:40:01,645 - __main__ - INFO - 
+Training complete!
+2026-02-08 17:42:07,871 - __main__ - INFO - 
+Training complete!
+2026-02-08 17:43:28,764 - __main__ - INFO - 
+Training complete!
+2026-02-08 17:44:34,009 - __main__ - INFO - 
+Training complete!
+2026-02-08 17:46:10,404 - __main__ - INFO - Training complete
+2026-02-09 22:33:57,508 - __main__ - INFO - Training complete
+2026-02-09 22:42:37,215 - __main__ - INFO - Training complete
+2026-02-09 22:47:13,347 - __main__ - INFO - Training complete
+2026-02-09 22:52:23,219 - __main__ - INFO - Training complete
+2026-02-09 22:55:32,766 - __main__ - INFO - Training complete
+2026-02-09 22:57:47,400 - __main__ - INFO - Training complete
+2026-02-09 23:02:42,345 - __main__ - INFO - Training complete
+2026-02-09 23:07:09,149 - __main__ - INFO - Training complete
+2026-02-09 23:09:39,377 - __main__ - INFO - Training complete
+2026-02-09 23:13:03,894 - __main__ - INFO - Training complete
+2026-02-09 23:14:52,361 - __main__ - INFO - Training complete
+2026-02-09 23:17:26,775 - __main__ - INFO - Training complete
+2026-02-09 23:40:46,333 - __main__ - INFO - Training complete.
+2026-02-10 13:50:58,841 - __main__ - INFO - Training complete.
+2026-02-11 13:00:14,189 - __main__ - INFO - Training complete.
+2026-02-11 13:02:32,258 - __main__ - INFO - Training complete
+2026-02-11 13:05:23,728 - __main__ - INFO - Training complete

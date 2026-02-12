@@ -1,0 +1,181 @@
+2026-02-05 13:30:30,958 - __main__ - INFO - ============================================================
+2026-02-05 13:30:30,960 - __main__ - INFO - EARTHQUAKE FEATURE ENGINEERING
+2026-02-05 13:30:30,961 - __main__ - INFO - ============================================================
+2026-02-05 13:30:30,962 - __main__ - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 13:30:30,963 - __main__ - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv
+2026-02-05 13:30:31,642 - __main__ - INFO - Loaded 12,959 cleaned records
+2026-02-05 13:30:31,711 - __main__ - INFO - Creating temporal features...
+2026-02-05 13:30:32,278 - __main__ - INFO - Creating seismic activity features...
+2026-02-05 13:30:32,598 - __main__ - INFO - Creating spatial features...
+2026-02-05 13:30:32,677 - __main__ - INFO - Creating lag features...
+2026-02-05 13:30:33,190 - __main__ - INFO - Creating interaction features...
+2026-02-05 13:30:33,337 - __main__ - INFO - Creating target variable (window: 24h, threshold: 5.0)...
+2026-02-05 13:31:08,332 - __main__ - INFO - Dropped 3,742 rows with NaN values (28.9%)
+2026-02-05 13:31:08,333 - __main__ - INFO - Final dataset shape: (9217, 80) (9,217 samples, 80 features)
+2026-02-05 13:31:10,298 - __main__ - INFO - 
+============================================================
+2026-02-05 13:31:10,298 - __main__ - INFO - FEATURE SUMMARY
+2026-02-05 13:31:10,298 - __main__ - INFO - ============================================================
+2026-02-05 13:31:10,298 - __main__ - INFO - Total features (including target): 80
+2026-02-05 13:31:10,298 - __main__ - INFO - Target distribution:
+2026-02-05 13:31:10,310 - __main__ - INFO - target
+0    8628
+1     589
+2026-02-05 13:31:10,315 - __main__ - INFO - Target positive rate: 0.064
+2026-02-05 13:31:10,317 - __main__ - INFO - 
+Top 10 feature columns:
+2026-02-05 13:31:10,319 - __main__ - INFO -   - time
+2026-02-05 13:31:10,320 - __main__ - INFO -   - latitude
+2026-02-05 13:31:10,320 - __main__ - INFO -   - longitude
+2026-02-05 13:31:10,321 - __main__ - INFO -   - depth
+2026-02-05 13:31:10,321 - __main__ - INFO -   - mag
+2026-02-05 13:31:10,322 - __main__ - INFO -   - magType
+2026-02-05 13:31:10,322 - __main__ - INFO -   - nst
+2026-02-05 13:31:10,325 - __main__ - INFO -   - gap
+2026-02-05 13:31:10,325 - __main__ - INFO -   - dmin
+2026-02-05 13:31:10,326 - __main__ - INFO -   - rms
+2026-02-05 20:24:58,653 - __main__ - INFO - ============================================================
+2026-02-05 20:24:58,655 - __main__ - INFO - EARTHQUAKE FEATURE ENGINEERING
+2026-02-05 20:24:58,655 - __main__ - INFO - ============================================================
+2026-02-05 20:24:58,655 - __main__ - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 20:24:58,655 - __main__ - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv
+2026-02-05 20:24:58,945 - __main__ - INFO - Loaded 12,959 cleaned records
+2026-02-05 20:24:58,945 - __main__ - INFO - Creating temporal features...
+2026-02-05 20:24:58,972 - __main__ - INFO - Creating seismic activity features...
+2026-02-05 20:24:59,078 - __main__ - INFO - Creating spatial features...
+2026-02-05 20:24:59,097 - __main__ - INFO - Creating lag features...
+2026-02-05 20:24:59,158 - __main__ - INFO - Creating interaction features...
+2026-02-05 20:24:59,176 - __main__ - INFO - Creating target variable (window: 24h, threshold: 5.0)...
+2026-02-05 20:25:23,504 - __main__ - INFO - Dropped 3,742 rows with NaN values (28.9%)
+2026-02-05 20:25:23,504 - __main__ - INFO - Final dataset shape: (9217, 80) (9,217 samples, 80 features)
+2026-02-05 20:25:25,187 - __main__ - INFO - 
+============================================================
+2026-02-05 20:25:25,187 - __main__ - INFO - FEATURE SUMMARY
+2026-02-05 20:25:25,187 - __main__ - INFO - ============================================================
+2026-02-05 20:25:25,191 - __main__ - INFO - Total features (including target): 80
+2026-02-05 20:25:25,191 - __main__ - INFO - Target distribution:
+2026-02-05 20:25:25,198 - __main__ - INFO - target
+0    8628
+1     589
+2026-02-05 20:25:25,198 - __main__ - INFO - Target positive rate: 0.064
+2026-02-05 20:25:25,198 - __main__ - INFO - 
+Top 10 feature columns:
+2026-02-05 20:25:25,198 - __main__ - INFO -   - time
+2026-02-05 20:25:25,201 - __main__ - INFO -   - latitude
+2026-02-05 20:25:25,201 - __main__ - INFO -   - longitude
+2026-02-05 20:25:25,201 - __main__ - INFO -   - depth
+2026-02-05 20:25:25,201 - __main__ - INFO -   - mag
+2026-02-05 20:25:25,201 - __main__ - INFO -   - magType
+2026-02-05 20:25:25,201 - __main__ - INFO -   - nst
+2026-02-05 20:25:25,205 - __main__ - INFO -   - gap
+2026-02-05 20:25:25,205 - __main__ - INFO -   - dmin
+2026-02-05 20:25:25,207 - __main__ - INFO -   - rms
+2026-02-07 23:59:15,926 - __main__ - INFO - ============================================================
+2026-02-07 23:59:15,936 - __main__ - INFO - EARTHQUAKE FEATURE ENGINEERING
+2026-02-07 23:59:15,940 - __main__ - INFO - ============================================================
+2026-02-07 23:59:15,942 - __main__ - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-07 23:59:15,955 - __main__ - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv
+2026-02-07 23:59:16,843 - __main__ - INFO - Loaded 12,959 cleaned records
+2026-02-07 23:59:16,873 - __main__ - INFO - Creating temporal features...
+2026-02-07 23:59:17,359 - __main__ - INFO - Creating seismic activity features...
+2026-02-07 23:59:17,532 - __main__ - INFO - Creating spatial features...
+2026-02-07 23:59:17,550 - __main__ - INFO - Creating lag features...
+2026-02-07 23:59:17,642 - __main__ - INFO - Creating interaction features...
+2026-02-07 23:59:17,663 - __main__ - INFO - Creating target variable (window: 24h, threshold: 5.0)...
+2026-02-07 23:59:51,556 - __main__ - INFO - Dropped 3,742 rows with NaN values (28.9%)
+2026-02-07 23:59:51,558 - __main__ - INFO - Final dataset shape: (9217, 80) (9,217 samples, 80 features)
+2026-02-07 23:59:53,939 - __main__ - INFO - 
+============================================================
+2026-02-07 23:59:53,942 - __main__ - INFO - FEATURE SUMMARY
+2026-02-07 23:59:53,944 - __main__ - INFO - ============================================================
+2026-02-07 23:59:53,946 - __main__ - INFO - Total features (including target): 80
+2026-02-07 23:59:53,950 - __main__ - INFO - Target distribution:
+2026-02-07 23:59:53,961 - __main__ - INFO - target
+0    8628
+1     589
+2026-02-07 23:59:53,962 - __main__ - INFO - Target positive rate: 0.064
+2026-02-07 23:59:53,964 - __main__ - INFO - 
+Top 10 feature columns:
+2026-02-07 23:59:53,967 - __main__ - INFO -   - time
+2026-02-07 23:59:53,973 - __main__ - INFO -   - latitude
+2026-02-07 23:59:53,976 - __main__ - INFO -   - longitude
+2026-02-07 23:59:53,984 - __main__ - INFO -   - depth
+2026-02-07 23:59:53,986 - __main__ - INFO -   - mag
+2026-02-07 23:59:53,989 - __main__ - INFO -   - magType
+2026-02-07 23:59:53,994 - __main__ - INFO -   - nst
+2026-02-07 23:59:53,997 - __main__ - INFO -   - gap
+2026-02-07 23:59:53,998 - __main__ - INFO -   - dmin
+2026-02-07 23:59:54,001 - __main__ - INFO -   - rms
+2026-02-08 00:08:04,486 - __main__ - INFO - ============================================================
+2026-02-08 00:08:04,500 - __main__ - INFO - EARTHQUAKE FEATURE ENGINEERING
+2026-02-08 00:08:04,511 - __main__ - INFO - ============================================================
+2026-02-08 00:08:04,529 - __main__ - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-08 00:08:04,555 - __main__ - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv
+2026-02-08 00:08:05,029 - __main__ - INFO - Loaded 12,959 cleaned records
+2026-02-08 00:08:05,431 - __main__ - INFO - Creating spatial features...
+2026-02-08 00:08:05,751 - __main__ - INFO - Creating lag features...
+2026-02-08 00:08:05,884 - __main__ - INFO - Creating interaction features...
+2026-02-08 00:08:05,908 - __main__ - INFO - Creating target variable (window: 24h, threshold: 5.0)...
+2026-02-08 00:08:40,900 - __main__ - INFO - Dropped 3,742 rows with NaN values (28.9%)
+2026-02-08 00:08:40,901 - __main__ - INFO - Final dataset shape: (9217, 80) (9,217 samples, 80 features)
+2026-02-08 00:08:43,122 - __main__ - INFO - 
+============================================================
+2026-02-08 00:08:43,126 - __main__ - INFO - FEATURE SUMMARY
+2026-02-08 00:08:43,128 - __main__ - INFO - ============================================================
+2026-02-08 00:08:43,129 - __main__ - INFO - Total features (including target): 80
+2026-02-08 00:08:43,130 - __main__ - INFO - Target distribution:
+2026-02-08 00:08:43,134 - __main__ - INFO - target
+0    8628
+1     589
+2026-02-08 00:08:43,136 - __main__ - INFO - Target positive rate: 0.064
+2026-02-08 00:08:43,137 - __main__ - INFO - 
+Top 10 feature columns:
+2026-02-08 00:08:43,144 - __main__ - INFO -   - time
+2026-02-08 00:08:43,148 - __main__ - INFO -   - latitude
+2026-02-08 00:08:43,159 - __main__ - INFO -   - longitude
+2026-02-08 00:08:43,163 - __main__ - INFO -   - depth
+2026-02-08 00:08:43,165 - __main__ - INFO -   - mag
+2026-02-08 00:08:43,168 - __main__ - INFO -   - magType
+2026-02-08 00:08:43,170 - __main__ - INFO -   - nst
+2026-02-08 00:08:43,170 - __main__ - INFO -   - gap
+2026-02-08 00:08:43,171 - __main__ - INFO -   - dmin
+2026-02-08 00:08:43,172 - __main__ - INFO -   - rms
+2026-02-08 16:04:54,188 - __main__ - INFO - Saved feature-engineered data to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-08 16:50:27,296 - __main__ - INFO - Creating target (window: 24h, mag: 5.0)...
+2026-02-08 16:50:38,652 - __main__ - INFO - Target positive rate: 0.000 (0 / 12959)
+2026-02-08 16:50:49,122 - __main__ - INFO - Saved feature-engineered data to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-08 17:22:41,889 - __main__ - INFO - Creating target (window: 24h, mag: 5.0)...
+2026-02-08 17:22:43,290 - __main__ - INFO - Target positive rate: 0.000 (0 / 12959)
+2026-02-08 17:22:45,708 - __main__ - INFO - Saved feature-engineered data to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-08 17:29:25,529 - __main__ - INFO - Saved feature-engineered data to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-08 17:30:55,543 - __main__ - INFO - Saved feature-engineered data to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-09 23:31:35,926 - __main__ - INFO - Loaded 12,959 raw records
+2026-02-09 23:31:36,560 - __main__ - INFO - Creating temporal features …
+2026-02-09 23:31:37,275 - __main__ - INFO - Creating seismic activity features (leak-free) …
+2026-02-09 23:31:38,194 - __main__ - INFO - Creating seismological physics features …
+2026-02-09 23:31:38,683 - __main__ - INFO - Creating spatial features …
+2026-02-09 23:31:38,794 - __main__ - INFO - Creating lag features (leak-free) …
+2026-02-09 23:31:39,032 - __main__ - INFO - Creating interaction features …
+2026-02-09 23:31:39,124 - __main__ - INFO - Building imbalance-hardened target …
+2026-02-09 23:31:39,364 - __main__ - INFO - Positive rate: 71.48%  (9,263 pos / 3,696 neg)  class ratio 1:0
+2026-02-09 23:31:50,332 - __main__ - INFO - Saved 9,247 × 102 to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-09 23:31:50,754 - __main__ - INFO - Final target distribution:
+target
+1    0.703471
+0    0.296529
+Name: proportion, dtype: float64
+2026-02-10 14:05:11,353 - __main__ - INFO - Loaded 12,959 raw records
+2026-02-10 14:05:12,649 - __main__ - INFO - Creating temporal features …
+2026-02-10 14:05:13,195 - __main__ - INFO - Creating seismic activity features (leak-free) …
+2026-02-10 14:05:15,501 - __main__ - INFO - Creating seismological physics features …
+2026-02-10 14:05:17,126 - __main__ - INFO - Creating spatial features …
+2026-02-10 14:05:17,231 - __main__ - INFO - Creating lag features (leak-free) …
+2026-02-10 14:05:17,911 - __main__ - INFO - Creating interaction features …
+2026-02-10 14:05:17,994 - __main__ - INFO - Building imbalance-hardened target …
+2026-02-10 14:05:18,424 - __main__ - INFO - Positive rate: 11.29%  (1,463 pos / 11,496 neg)  class ratio 1:8
+2026-02-10 14:05:36,880 - __main__ - INFO - Saved 9,247 × 102 to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_features.csv
+2026-02-10 14:05:36,914 - __main__ - INFO - Final target distribution:
+target
+0    0.893587
+1    0.106413
+Name: proportion, dtype: float64

@@ -1,0 +1,815 @@
+2026-02-05 21:07:00,380 - __main__ - INFO - ======================================================================
+2026-02-05 21:07:00,394 - __main__ - INFO - STARTING COMPLETE MODEL TRAINING PIPELINE
+2026-02-05 21:07:00,396 - __main__ - INFO - ======================================================================
+2026-02-05 21:07:00,406 - __main__ - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:07:00,432 - __main__ - INFO - 
+======================================================================
+2026-02-05 21:07:00,432 - __main__ - INFO - STEP 1: DATA CLEANING
+2026-02-05 21:07:00,436 - __main__ - INFO - ======================================================================
+2026-02-05 21:07:00,454 - __main__ - INFO - 
+--- Cleaning Earthquake Data ---
+2026-02-05 21:07:00,654 - src.utils.earthquake_cleaner - INFO - ============================================================
+2026-02-05 21:07:00,791 - src.utils.earthquake_cleaner - INFO - EARTHQUAKE DATA CLEANING
+2026-02-05 21:07:00,858 - src.utils.earthquake_cleaner - INFO - ============================================================
+2026-02-05 21:07:00,935 - src.utils.earthquake_cleaner - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:07:00,982 - src.utils.earthquake_cleaner - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\raw\earthquakes\california_training_data.csv
+2026-02-05 21:07:01,657 - src.utils.earthquake_cleaner - INFO - Loaded 13,284 raw records
+2026-02-05 21:07:01,669 - src.utils.earthquake_cleaner - INFO - Starting data cleaning...
+2026-02-05 21:07:01,850 - src.utils.earthquake_cleaner - INFO - Removed 0 duplicate rows
+2026-02-05 21:07:01,886 - src.utils.earthquake_cleaner - INFO - After dropping missing critical values: 13284 rows (was 13284)
+2026-02-05 21:07:01,892 - src.utils.earthquake_cleaner - WARNING - Removing 219 invalid depth values (<0 or >700km)
+2026-02-05 21:07:01,919 - src.utils.earthquake_cleaner - INFO - Parsing 'time' column to datetime...
+2026-02-05 21:07:02,224 - src.utils.earthquake_cleaner - WARNING - Removing 106 rows with unparseable timestamps
+2026-02-05 21:07:02,283 - src.utils.earthquake_cleaner - INFO - OK Cleaning complete. Final rows: 12959 (from original 13284)
+2026-02-05 21:07:02,337 - src.utils.earthquake_cleaner - INFO - Adding derived features...
+2026-02-05 21:07:02,548 - src.utils.earthquake_cleaner - INFO - OK Added 9 derived features
+2026-02-05 21:07:04,504 - src.utils.helpers - INFO - Saved cleaned earthquake data: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv (12959 records)
+2026-02-05 21:07:04,511 - src.utils.earthquake_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:04,529 - src.utils.earthquake_cleaner - INFO - CLEANING SUMMARY
+2026-02-05 21:07:04,555 - src.utils.earthquake_cleaner - INFO - ============================================================
+2026-02-05 21:07:04,581 - src.utils.earthquake_cleaner - INFO - Original records: 13,284
+2026-02-05 21:07:04,607 - src.utils.earthquake_cleaner - INFO - Cleaned records: 12,959
+2026-02-05 21:07:04,620 - src.utils.earthquake_cleaner - INFO - Retention rate: 97.6%
+2026-02-05 21:07:04,634 - src.utils.earthquake_cleaner - INFO - Significant earthquakes (mag >= 5.0): 35
+2026-02-05 21:07:04,671 - src.utils.earthquake_cleaner - INFO - Date range: 2015-01-01 08:43:07.260000+00:00 to 2023-12-31 20:28:15.190000+00:00
+2026-02-05 21:07:04,707 - src.utils.earthquake_cleaner - INFO - OK Cleaned data saved to: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv
+2026-02-05 21:07:04,750 - __main__ - INFO - OK Earthquake data cleaning completed successfully
+2026-02-05 21:07:04,783 - __main__ - INFO - 
+--- Cleaning Flood Data ---
+2026-02-05 21:07:04,892 - src.utils.flood_cleaner - INFO - Cleaning data for 5 monitoring sites...
+2026-02-05 21:07:04,912 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:04,937 - src.utils.flood_cleaner - INFO - Processing site 07374000: Mississippi River at Baton Rouge, LA
+2026-02-05 21:07:05,022 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:05,161 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:05,215 - src.utils.flood_cleaner - INFO - FLOOD DATA CLEANING - Site 07374000
+2026-02-05 21:07:05,276 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:05,307 - src.utils.flood_cleaner - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:07:05,330 - src.utils.flood_cleaner - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\raw\floods\07374000_Mississippi_River_at_Baton_Rouge_LA_training.csv
+2026-02-05 21:07:05,469 - src.utils.flood_cleaner - INFO - Loaded 5,081 raw records
+2026-02-05 21:07:05,493 - src.utils.flood_cleaner - INFO - Starting data cleaning for site 07374000...
+2026-02-05 21:07:05,515 - src.utils.flood_cleaner - INFO - Parsing 'date' column to datetime...
+2026-02-05 21:07:05,628 - src.utils.flood_cleaner - INFO - Using discharge column: 00060_Mean
+2026-02-05 21:07:05,675 - src.utils.flood_cleaner - INFO - OK Cleaning complete. Final rows: 5,081 (from original 5,081)
+2026-02-05 21:07:05,688 - src.utils.flood_cleaner - INFO - Adding derived features...
+2026-02-05 21:07:05,826 - src.utils.flood_cleaner - INFO - OK Added 20+ derived features
+2026-02-05 21:07:05,830 - src.utils.flood_cleaner - INFO - Creating flood labels (threshold: 95th percentile)...
+2026-02-05 21:07:05,871 - src.utils.flood_cleaner - INFO - OK Identified 233 flood events (4.59%)
+2026-02-05 21:07:05,895 - src.utils.flood_cleaner - INFO -   Flood threshold: 1,180,000.00 cfs
+2026-02-05 21:07:06,942 - src.utils.helpers - INFO - Saved cleaned flood data for site 07374000: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_07374000.csv (5081 records)
+2026-02-05 21:07:06,966 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:06,999 - src.utils.flood_cleaner - INFO - CLEANING SUMMARY
+2026-02-05 21:07:07,012 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:07,035 - src.utils.flood_cleaner - INFO - Original records: 5,081
+2026-02-05 21:07:07,047 - src.utils.flood_cleaner - INFO - Cleaned records: 5,081
+2026-02-05 21:07:07,062 - src.utils.flood_cleaner - INFO - Retention rate: 100.0%
+2026-02-05 21:07:07,068 - src.utils.flood_cleaner - INFO - Flood events (>95th percentile): 233
+2026-02-05 21:07:07,089 - src.utils.flood_cleaner - INFO - Date range: 2010-01-01 00:00:00+00:00 to 2024-01-01 00:00:00+00:00
+2026-02-05 21:07:07,138 - src.utils.flood_cleaner - INFO - Discharge range: 131,000.00 - 1,430,000.00 cfs
+2026-02-05 21:07:07,177 - src.utils.flood_cleaner - INFO - OK Cleaned data saved to: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_07374000.csv
+2026-02-05 21:07:07,201 - src.utils.flood_cleaner - INFO - OK Successfully cleaned data for 07374000
+2026-02-05 21:07:07,231 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:07,262 - src.utils.flood_cleaner - INFO - Processing site 01646500: Potomac River at Little Falls, MD
+2026-02-05 21:07:07,281 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:07,361 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:07,371 - src.utils.flood_cleaner - INFO - FLOOD DATA CLEANING - Site 01646500
+2026-02-05 21:07:07,382 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:07,398 - src.utils.flood_cleaner - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:07:07,418 - src.utils.flood_cleaner - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\raw\floods\01646500_Potomac_River_at_Little_Falls_MD_training.csv
+2026-02-05 21:07:07,521 - src.utils.flood_cleaner - INFO - Loaded 5,114 raw records
+2026-02-05 21:07:07,533 - src.utils.flood_cleaner - INFO - Starting data cleaning for site 01646500...
+2026-02-05 21:07:07,541 - src.utils.flood_cleaner - INFO - Parsing 'date' column to datetime...
+2026-02-05 21:07:07,618 - src.utils.flood_cleaner - INFO - Using discharge column: 00060_Mean
+2026-02-05 21:07:07,635 - src.utils.flood_cleaner - INFO - OK Cleaning complete. Final rows: 5,114 (from original 5,114)
+2026-02-05 21:07:07,653 - src.utils.flood_cleaner - INFO - Adding derived features...
+2026-02-05 21:07:07,826 - src.utils.flood_cleaner - INFO - OK Added 20+ derived features
+2026-02-05 21:07:07,830 - src.utils.flood_cleaner - INFO - Creating flood labels (threshold: 95th percentile)...
+2026-02-05 21:07:07,852 - src.utils.flood_cleaner - INFO - OK Identified 256 flood events (5.01%)
+2026-02-05 21:07:07,858 - src.utils.flood_cleaner - INFO -   Flood threshold: 37,205.00 cfs
+2026-02-05 21:07:08,653 - src.utils.helpers - INFO - Saved cleaned flood data for site 01646500: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_01646500.csv (5114 records)
+2026-02-05 21:07:08,653 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:08,655 - src.utils.flood_cleaner - INFO - CLEANING SUMMARY
+2026-02-05 21:07:08,657 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:08,657 - src.utils.flood_cleaner - INFO - Original records: 5,114
+2026-02-05 21:07:08,659 - src.utils.flood_cleaner - INFO - Cleaned records: 5,114
+2026-02-05 21:07:08,659 - src.utils.flood_cleaner - INFO - Retention rate: 100.0%
+2026-02-05 21:07:08,662 - src.utils.flood_cleaner - INFO - Flood events (>95th percentile): 256
+2026-02-05 21:07:08,664 - src.utils.flood_cleaner - INFO - Date range: 2010-01-01 00:00:00+00:00 to 2024-01-01 00:00:00+00:00
+2026-02-05 21:07:08,669 - src.utils.flood_cleaner - INFO - Discharge range: 405.00 - 192,000.00 cfs
+2026-02-05 21:07:08,669 - src.utils.flood_cleaner - INFO - OK Cleaned data saved to: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_01646500.csv
+2026-02-05 21:07:08,678 - src.utils.flood_cleaner - INFO - OK Successfully cleaned data for 01646500
+2026-02-05 21:07:08,678 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:08,680 - src.utils.flood_cleaner - INFO - Processing site 14211720: Willamette River at Portland, OR
+2026-02-05 21:07:08,680 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:08,719 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:08,722 - src.utils.flood_cleaner - INFO - FLOOD DATA CLEANING - Site 14211720
+2026-02-05 21:07:08,724 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:08,725 - src.utils.flood_cleaner - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:07:08,739 - src.utils.flood_cleaner - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\raw\floods\14211720_Willamette_River_at_Portland_OR_training.csv
+2026-02-05 21:07:08,814 - src.utils.flood_cleaner - INFO - Loaded 5,114 raw records
+2026-02-05 21:07:08,818 - src.utils.flood_cleaner - INFO - Starting data cleaning for site 14211720...
+2026-02-05 21:07:08,820 - src.utils.flood_cleaner - INFO - Parsing 'date' column to datetime...
+2026-02-05 21:07:08,896 - src.utils.flood_cleaner - INFO - Using discharge column: 00060_Mean
+2026-02-05 21:07:08,907 - src.utils.flood_cleaner - INFO - OK Cleaning complete. Final rows: 5,114 (from original 5,114)
+2026-02-05 21:07:08,909 - src.utils.flood_cleaner - INFO - Adding derived features...
+2026-02-05 21:07:08,997 - src.utils.flood_cleaner - INFO - OK Added 20+ derived features
+2026-02-05 21:07:08,997 - src.utils.flood_cleaner - INFO - Creating flood labels (threshold: 95th percentile)...
+2026-02-05 21:07:09,011 - src.utils.flood_cleaner - INFO - OK Identified 254 flood events (4.97%)
+2026-02-05 21:07:09,011 - src.utils.flood_cleaner - INFO -   Flood threshold: 95,700.00 cfs
+2026-02-05 21:07:10,922 - src.utils.helpers - INFO - Saved cleaned flood data for site 14211720: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_14211720.csv (5114 records)
+2026-02-05 21:07:11,054 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:11,193 - src.utils.flood_cleaner - INFO - CLEANING SUMMARY
+2026-02-05 21:07:11,337 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:11,499 - src.utils.flood_cleaner - INFO - Original records: 5,114
+2026-02-05 21:07:11,646 - src.utils.flood_cleaner - INFO - Cleaned records: 5,114
+2026-02-05 21:07:11,783 - src.utils.flood_cleaner - INFO - Retention rate: 100.0%
+2026-02-05 21:07:11,927 - src.utils.flood_cleaner - INFO - Flood events (>95th percentile): 254
+2026-02-05 21:07:12,045 - src.utils.flood_cleaner - INFO - Date range: 2010-01-01 00:00:00+00:00 to 2024-01-01 00:00:00+00:00
+2026-02-05 21:07:12,158 - src.utils.flood_cleaner - INFO - Discharge range: 1,840.00 - 200,000.00 cfs
+2026-02-05 21:07:12,322 - src.utils.flood_cleaner - INFO - OK Cleaned data saved to: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_14211720.csv
+2026-02-05 21:07:12,474 - src.utils.flood_cleaner - INFO - OK Successfully cleaned data for 14211720
+2026-02-05 21:07:12,650 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:12,786 - src.utils.flood_cleaner - INFO - Processing site 08067000: Neches River at Evadale, TX
+2026-02-05 21:07:12,934 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:13,089 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:13,202 - src.utils.flood_cleaner - INFO - FLOOD DATA CLEANING - Site 08067000
+2026-02-05 21:07:13,515 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:13,780 - src.utils.flood_cleaner - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:07:13,854 - src.utils.flood_cleaner - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\raw\floods\08067000_Neches_River_at_Evadale_TX_training.csv
+2026-02-05 21:07:14,041 - src.utils.flood_cleaner - INFO - Loaded 5,082 raw records
+2026-02-05 21:07:14,128 - src.utils.flood_cleaner - INFO - Starting data cleaning for site 08067000...
+2026-02-05 21:07:14,211 - src.utils.flood_cleaner - INFO - Parsing 'date' column to datetime...
+2026-02-05 21:07:14,436 - src.utils.flood_cleaner - INFO - Using discharge column: 00060_Mean
+2026-02-05 21:07:14,536 - src.utils.flood_cleaner - WARNING - Missing discharge values: 2312 (45.49%)
+2026-02-05 21:07:14,656 - src.utils.flood_cleaner - WARNING - Filling 1942 remaining missing values with ffill/bfill
+2026-02-05 21:07:14,739 - src.utils.flood_cleaner - INFO - OK Cleaning complete. Final rows: 5,082 (from original 5,082)
+2026-02-05 21:07:14,824 - src.utils.flood_cleaner - INFO - Adding derived features...
+2026-02-05 21:07:15,095 - src.utils.flood_cleaner - INFO - OK Added 20+ derived features
+2026-02-05 21:07:15,197 - src.utils.flood_cleaner - INFO - Creating flood labels (threshold: 95th percentile)...
+2026-02-05 21:07:15,285 - src.utils.flood_cleaner - INFO - OK Identified 255 flood events (5.02%)
+2026-02-05 21:07:15,355 - src.utils.flood_cleaner - INFO -   Flood threshold: 44,795.00 cfs
+2026-02-05 21:07:17,374 - src.utils.helpers - INFO - Saved cleaned flood data for site 08067000: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_08067000.csv (5082 records)
+2026-02-05 21:07:17,411 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:17,471 - src.utils.flood_cleaner - INFO - CLEANING SUMMARY
+2026-02-05 21:07:17,516 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:17,561 - src.utils.flood_cleaner - INFO - Original records: 5,082
+2026-02-05 21:07:17,608 - src.utils.flood_cleaner - INFO - Cleaned records: 5,082
+2026-02-05 21:07:17,668 - src.utils.flood_cleaner - INFO - Retention rate: 100.0%
+2026-02-05 21:07:17,725 - src.utils.flood_cleaner - INFO - Flood events (>95th percentile): 255
+2026-02-05 21:07:17,766 - src.utils.flood_cleaner - INFO - Date range: 2010-01-01 00:00:00+00:00 to 2024-01-01 00:00:00+00:00
+2026-02-05 21:07:17,828 - src.utils.flood_cleaner - INFO - Discharge range: 954.00 - 124,000.00 cfs
+2026-02-05 21:07:17,888 - src.utils.flood_cleaner - INFO - OK Cleaned data saved to: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_08067000.csv
+2026-02-05 21:07:17,921 - src.utils.flood_cleaner - INFO - OK Successfully cleaned data for 08067000
+2026-02-05 21:07:17,947 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:17,967 - src.utils.flood_cleaner - INFO - Processing site 03374100: White River at Hazleton, IN
+2026-02-05 21:07:18,026 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:18,119 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:18,148 - src.utils.flood_cleaner - INFO - FLOOD DATA CLEANING - Site 03374100
+2026-02-05 21:07:18,177 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:18,220 - src.utils.flood_cleaner - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:07:18,274 - src.utils.flood_cleaner - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\raw\floods\03374100_White_River_at_Hazleton_IN_training.csv
+2026-02-05 21:07:18,382 - src.utils.flood_cleaner - INFO - Loaded 4,841 raw records
+2026-02-05 21:07:18,392 - src.utils.flood_cleaner - INFO - Starting data cleaning for site 03374100...
+2026-02-05 21:07:18,402 - src.utils.flood_cleaner - INFO - Parsing 'date' column to datetime...
+2026-02-05 21:07:18,487 - src.utils.flood_cleaner - INFO - Using discharge column: 00060_Mean
+2026-02-05 21:07:18,512 - src.utils.flood_cleaner - INFO - OK Cleaning complete. Final rows: 4,841 (from original 4,841)
+2026-02-05 21:07:18,532 - src.utils.flood_cleaner - INFO - Adding derived features...
+2026-02-05 21:07:18,698 - src.utils.flood_cleaner - INFO - OK Added 20+ derived features
+2026-02-05 21:07:18,706 - src.utils.flood_cleaner - INFO - Creating flood labels (threshold: 95th percentile)...
+2026-02-05 21:07:18,734 - src.utils.flood_cleaner - INFO - OK Identified 242 flood events (5.00%)
+2026-02-05 21:07:18,739 - src.utils.flood_cleaner - INFO -   Flood threshold: 44,900.00 cfs
+2026-02-05 21:07:19,633 - src.utils.helpers - INFO - Saved cleaned flood data for site 03374100: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_03374100.csv (4841 records)
+2026-02-05 21:07:19,639 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:19,647 - src.utils.flood_cleaner - INFO - CLEANING SUMMARY
+2026-02-05 21:07:19,670 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:19,681 - src.utils.flood_cleaner - INFO - Original records: 4,841
+2026-02-05 21:07:19,687 - src.utils.flood_cleaner - INFO - Cleaned records: 4,841
+2026-02-05 21:07:19,693 - src.utils.flood_cleaner - INFO - Retention rate: 100.0%
+2026-02-05 21:07:19,705 - src.utils.flood_cleaner - INFO - Flood events (>95th percentile): 242
+2026-02-05 21:07:19,718 - src.utils.flood_cleaner - INFO - Date range: 2010-10-01 00:00:00+00:00 to 2024-01-01 00:00:00+00:00
+2026-02-05 21:07:19,722 - src.utils.flood_cleaner - INFO - Discharge range: 1,100.00 - 137,000.00 cfs
+2026-02-05 21:07:19,738 - src.utils.flood_cleaner - INFO - OK Cleaned data saved to: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_03374100.csv
+2026-02-05 21:07:19,740 - src.utils.flood_cleaner - INFO - OK Successfully cleaned data for 03374100
+2026-02-05 21:07:19,740 - src.utils.flood_cleaner - INFO - 
+============================================================
+2026-02-05 21:07:19,740 - src.utils.flood_cleaner - INFO - CLEANING COMPLETE: 5/5 sites processed successfully
+2026-02-05 21:07:19,756 - src.utils.flood_cleaner - INFO - ============================================================
+2026-02-05 21:07:19,770 - __main__ - INFO - OK Flood data cleaning completed for 5 sites
+2026-02-05 21:07:19,770 - __main__ - INFO - 
+======================================================================
+2026-02-05 21:07:19,772 - __main__ - INFO - STEP 2: FEATURE ENGINEERING
+2026-02-05 21:07:19,772 - __main__ - INFO - ======================================================================
+2026-02-05 21:07:19,772 - __main__ - INFO - 
+--- Engineering Earthquake Features ---
+2026-02-05 21:07:19,844 - src.utils.earthquake_features - INFO - ============================================================
+2026-02-05 21:07:19,847 - src.utils.earthquake_features - INFO - EARTHQUAKE FEATURE ENGINEERING
+2026-02-05 21:07:19,847 - src.utils.earthquake_features - INFO - ============================================================
+2026-02-05 21:07:19,848 - src.utils.earthquake_features - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:07:19,850 - src.utils.earthquake_features - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv
+2026-02-05 21:07:20,451 - src.utils.earthquake_features - INFO - Loaded 12,959 cleaned records
+2026-02-05 21:07:20,455 - src.utils.earthquake_features - INFO - Creating temporal features...
+2026-02-05 21:07:20,512 - src.utils.earthquake_features - INFO - Creating seismic activity features...
+2026-02-05 21:07:20,684 - src.utils.earthquake_features - INFO - Creating spatial features...
+2026-02-05 21:07:20,718 - src.utils.earthquake_features - INFO - Creating lag features...
+2026-02-05 21:07:20,815 - src.utils.earthquake_features - INFO - Creating interaction features...
+2026-02-05 21:07:20,839 - src.utils.earthquake_features - INFO - Creating target variable (window: 24h, threshold: 5.0)...
+2026-02-05 21:08:25,976 - src.utils.earthquake_features - INFO - Dropped 3,742 rows with NaN values (28.9%)
+2026-02-05 21:08:25,976 - src.utils.earthquake_features - INFO - Final dataset shape: (9217, 80) (9,217 samples, 80 features)
+2026-02-05 21:08:45,617 - src.utils.earthquake_features - INFO - 
+============================================================
+2026-02-05 21:08:45,619 - src.utils.earthquake_features - INFO - FEATURE SUMMARY
+2026-02-05 21:08:45,619 - src.utils.earthquake_features - INFO - ============================================================
+2026-02-05 21:08:45,619 - src.utils.earthquake_features - INFO - Total features (including target): 80
+2026-02-05 21:08:45,621 - src.utils.earthquake_features - INFO - Target distribution:
+2026-02-05 21:08:45,641 - src.utils.earthquake_features - INFO - target
+0    8628
+1     589
+2026-02-05 21:08:45,641 - src.utils.earthquake_features - INFO - Target positive rate: 0.064
+2026-02-05 21:08:45,649 - src.utils.earthquake_features - INFO - 
+Top 10 feature columns:
+2026-02-05 21:08:45,655 - src.utils.earthquake_features - INFO -   - time
+2026-02-05 21:08:45,655 - src.utils.earthquake_features - INFO -   - latitude
+2026-02-05 21:08:45,657 - src.utils.earthquake_features - INFO -   - longitude
+2026-02-05 21:08:45,671 - src.utils.earthquake_features - INFO -   - depth
+2026-02-05 21:08:45,673 - src.utils.earthquake_features - INFO -   - mag
+2026-02-05 21:08:45,690 - src.utils.earthquake_features - INFO -   - magType
+2026-02-05 21:08:45,704 - src.utils.earthquake_features - INFO -   - nst
+2026-02-05 21:08:45,719 - src.utils.earthquake_features - INFO -   - gap
+2026-02-05 21:08:45,742 - src.utils.earthquake_features - INFO -   - dmin
+2026-02-05 21:08:45,749 - src.utils.earthquake_features - INFO -   - rms
+2026-02-05 21:08:45,753 - __main__ - INFO - OK Earthquake feature engineering completed successfully
+2026-02-05 21:08:45,755 - __main__ - INFO - 
+--- Engineering Flood Features ---
+2026-02-05 21:08:45,868 - src.utils.flood_features - INFO - Engineering features for 5 monitoring sites...
+2026-02-05 21:08:45,870 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:45,872 - src.utils.flood_features - INFO - Processing site 07374000: Mississippi River at Baton Rouge, LA
+2026-02-05 21:08:45,873 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:45,926 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:45,932 - src.utils.flood_features - INFO - FLOOD FEATURE ENGINEERING - Site 07374000
+2026-02-05 21:08:45,932 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:45,934 - src.utils.flood_features - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:08:45,934 - src.utils.flood_features - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_07374000.csv
+2026-02-05 21:08:46,167 - src.utils.flood_features - INFO - Loaded 5,081 cleaned records
+2026-02-05 21:08:46,167 - src.utils.flood_features - INFO - Creating temporal features...
+2026-02-05 21:08:46,307 - src.utils.flood_features - INFO - Creating statistical features...
+2026-02-05 21:08:46,422 - src.utils.flood_features - INFO - Creating trend features...
+2026-02-05 21:08:46,755 - src.utils.flood_features - INFO - Creating extreme event features...
+2026-02-05 21:08:47,185 - src.utils.flood_features - INFO - Creating target variable (window: 7 days)...
+2026-02-05 21:08:47,310 - src.utils.flood_features - INFO - Dropped 81 rows with NaN values (1.6%)
+2026-02-05 21:08:47,310 - src.utils.flood_features - INFO - Final dataset shape: (5000, 70) (5,000 samples, 70 features)
+2026-02-05 21:08:49,257 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:49,259 - src.utils.flood_features - INFO - FEATURE SUMMARY
+2026-02-05 21:08:49,259 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:49,261 - src.utils.flood_features - INFO - Total features (including target): 70
+2026-02-05 21:08:49,264 - src.utils.flood_features - INFO - Target distribution:
+2026-02-05 21:08:49,278 - src.utils.flood_features - INFO - target_flood_next_7d
+0    4712
+1     288
+2026-02-05 21:08:49,284 - src.utils.flood_features - INFO - Target positive rate: 0.058
+2026-02-05 21:08:49,286 - src.utils.flood_features - INFO - 
+Top 10 feature columns:
+2026-02-05 21:08:49,291 - src.utils.flood_features - INFO -   - date
+2026-02-05 21:08:49,301 - src.utils.flood_features - INFO -   - site_no
+2026-02-05 21:08:49,303 - src.utils.flood_features - INFO -   - discharge
+2026-02-05 21:08:49,308 - src.utils.flood_features - INFO -   - 00060_Mean_cd
+2026-02-05 21:08:49,317 - src.utils.flood_features - INFO -   - 00065_Maximum
+2026-02-05 21:08:49,317 - src.utils.flood_features - INFO -   - 00065_Maximum_cd
+2026-02-05 21:08:49,319 - src.utils.flood_features - INFO -   - 00065_Minimum
+2026-02-05 21:08:49,319 - src.utils.flood_features - INFO -   - 00065_Minimum_cd
+2026-02-05 21:08:49,321 - src.utils.flood_features - INFO -   - 00065_Mean
+2026-02-05 21:08:49,321 - src.utils.flood_features - INFO -   - 00065_Mean_cd
+2026-02-05 21:08:49,330 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:49,334 - src.utils.flood_features - INFO - Processing site 01646500: Potomac River at Little Falls, MD
+2026-02-05 21:08:49,334 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:49,397 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:49,399 - src.utils.flood_features - INFO - FLOOD FEATURE ENGINEERING - Site 01646500
+2026-02-05 21:08:49,399 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:49,399 - src.utils.flood_features - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:08:49,401 - src.utils.flood_features - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_01646500.csv
+2026-02-05 21:08:49,710 - src.utils.flood_features - INFO - Loaded 5,114 cleaned records
+2026-02-05 21:08:49,710 - src.utils.flood_features - INFO - Creating temporal features...
+2026-02-05 21:08:49,773 - src.utils.flood_features - INFO - Creating statistical features...
+2026-02-05 21:08:49,837 - src.utils.flood_features - INFO - Creating trend features...
+2026-02-05 21:08:49,944 - src.utils.flood_features - INFO - Creating extreme event features...
+2026-02-05 21:08:50,260 - src.utils.flood_features - INFO - Creating target variable (window: 7 days)...
+2026-02-05 21:08:50,532 - src.utils.flood_features - INFO - Dropped 30 rows with NaN values (0.6%)
+2026-02-05 21:08:50,534 - src.utils.flood_features - INFO - Final dataset shape: (5084, 64) (5,084 samples, 64 features)
+2026-02-05 21:08:52,181 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:52,183 - src.utils.flood_features - INFO - FEATURE SUMMARY
+2026-02-05 21:08:52,183 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:52,183 - src.utils.flood_features - INFO - Total features (including target): 64
+2026-02-05 21:08:52,185 - src.utils.flood_features - INFO - Target distribution:
+2026-02-05 21:08:52,189 - src.utils.flood_features - INFO - target_flood_next_7d
+0    4438
+1     646
+2026-02-05 21:08:52,191 - src.utils.flood_features - INFO - Target positive rate: 0.127
+2026-02-05 21:08:52,195 - src.utils.flood_features - INFO - 
+Top 10 feature columns:
+2026-02-05 21:08:52,201 - src.utils.flood_features - INFO -   - date
+2026-02-05 21:08:52,203 - src.utils.flood_features - INFO -   - site_no
+2026-02-05 21:08:52,205 - src.utils.flood_features - INFO -   - discharge
+2026-02-05 21:08:52,210 - src.utils.flood_features - INFO -   - 00060_Mean_cd
+2026-02-05 21:08:52,215 - src.utils.flood_features - INFO -   - site_name
+2026-02-05 21:08:52,215 - src.utils.flood_features - INFO -   - site_id
+2026-02-05 21:08:52,215 - src.utils.flood_features - INFO -   - year
+2026-02-05 21:08:52,217 - src.utils.flood_features - INFO -   - month
+2026-02-05 21:08:52,217 - src.utils.flood_features - INFO -   - day
+2026-02-05 21:08:52,217 - src.utils.flood_features - INFO -   - day_of_week
+2026-02-05 21:08:52,222 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:52,226 - src.utils.flood_features - INFO - Processing site 14211720: Willamette River at Portland, OR
+2026-02-05 21:08:52,228 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:52,267 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:52,267 - src.utils.flood_features - INFO - FLOOD FEATURE ENGINEERING - Site 14211720
+2026-02-05 21:08:52,267 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:52,269 - src.utils.flood_features - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:08:52,277 - src.utils.flood_features - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_14211720.csv
+2026-02-05 21:08:52,496 - src.utils.flood_features - INFO - Loaded 5,114 cleaned records
+2026-02-05 21:08:52,502 - src.utils.flood_features - INFO - Creating temporal features...
+2026-02-05 21:08:52,534 - src.utils.flood_features - INFO - Creating statistical features...
+2026-02-05 21:08:52,631 - src.utils.flood_features - INFO - Creating trend features...
+2026-02-05 21:08:52,683 - src.utils.flood_features - INFO - Creating extreme event features...
+2026-02-05 21:08:52,744 - src.utils.flood_features - INFO - Creating target variable (window: 7 days)...
+2026-02-05 21:08:52,799 - src.utils.flood_features - INFO - Dropped 30 rows with NaN values (0.6%)
+2026-02-05 21:08:52,801 - src.utils.flood_features - INFO - Final dataset shape: (5084, 64) (5,084 samples, 64 features)
+2026-02-05 21:08:53,813 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:53,815 - src.utils.flood_features - INFO - FEATURE SUMMARY
+2026-02-05 21:08:53,815 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:53,815 - src.utils.flood_features - INFO - Total features (including target): 64
+2026-02-05 21:08:53,817 - src.utils.flood_features - INFO - Target distribution:
+2026-02-05 21:08:53,819 - src.utils.flood_features - INFO - target_flood_next_7d
+0    4614
+1     470
+2026-02-05 21:08:53,819 - src.utils.flood_features - INFO - Target positive rate: 0.092
+2026-02-05 21:08:53,821 - src.utils.flood_features - INFO - 
+Top 10 feature columns:
+2026-02-05 21:08:53,821 - src.utils.flood_features - INFO -   - date
+2026-02-05 21:08:53,824 - src.utils.flood_features - INFO -   - site_no
+2026-02-05 21:08:53,826 - src.utils.flood_features - INFO -   - discharge
+2026-02-05 21:08:53,826 - src.utils.flood_features - INFO -   - 00060_Mean_cd
+2026-02-05 21:08:53,826 - src.utils.flood_features - INFO -   - site_name
+2026-02-05 21:08:53,829 - src.utils.flood_features - INFO -   - site_id
+2026-02-05 21:08:53,829 - src.utils.flood_features - INFO -   - year
+2026-02-05 21:08:53,829 - src.utils.flood_features - INFO -   - month
+2026-02-05 21:08:53,833 - src.utils.flood_features - INFO -   - day
+2026-02-05 21:08:53,833 - src.utils.flood_features - INFO -   - day_of_week
+2026-02-05 21:08:53,842 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:53,844 - src.utils.flood_features - INFO - Processing site 08067000: Neches River at Evadale, TX
+2026-02-05 21:08:53,845 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:53,874 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:53,876 - src.utils.flood_features - INFO - FLOOD FEATURE ENGINEERING - Site 08067000
+2026-02-05 21:08:53,876 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:53,876 - src.utils.flood_features - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:08:53,878 - src.utils.flood_features - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_08067000.csv
+2026-02-05 21:08:54,518 - src.utils.flood_features - INFO - Loaded 5,082 cleaned records
+2026-02-05 21:08:54,518 - src.utils.flood_features - INFO - Creating temporal features...
+2026-02-05 21:08:54,562 - src.utils.flood_features - INFO - Creating statistical features...
+2026-02-05 21:08:54,632 - src.utils.flood_features - INFO - Creating trend features...
+2026-02-05 21:08:54,696 - src.utils.flood_features - INFO - Creating extreme event features...
+2026-02-05 21:08:54,877 - src.utils.flood_features - INFO - Creating target variable (window: 7 days)...
+2026-02-05 21:08:55,046 - src.utils.flood_features - INFO - Dropped 2,322 rows with NaN values (45.7%)
+2026-02-05 21:08:55,048 - src.utils.flood_features - INFO - Final dataset shape: (2760, 66) (2,760 samples, 66 features)
+2026-02-05 21:08:55,978 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:55,980 - src.utils.flood_features - INFO - FEATURE SUMMARY
+2026-02-05 21:08:55,991 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:55,993 - src.utils.flood_features - INFO - Total features (including target): 66
+2026-02-05 21:08:55,995 - src.utils.flood_features - INFO - Target distribution:
+2026-02-05 21:08:56,006 - src.utils.flood_features - INFO - target_flood_next_7d
+0    2414
+1     346
+2026-02-05 21:08:56,008 - src.utils.flood_features - INFO - Target positive rate: 0.125
+2026-02-05 21:08:56,010 - src.utils.flood_features - INFO - 
+Top 10 feature columns:
+2026-02-05 21:08:56,012 - src.utils.flood_features - INFO -   - date
+2026-02-05 21:08:56,022 - src.utils.flood_features - INFO -   - site_no
+2026-02-05 21:08:56,024 - src.utils.flood_features - INFO -   - discharge
+2026-02-05 21:08:56,028 - src.utils.flood_features - INFO -   - 00060_Mean_cd
+2026-02-05 21:08:56,028 - src.utils.flood_features - INFO -   - 00065_Mean
+2026-02-05 21:08:56,030 - src.utils.flood_features - INFO -   - 00065_Mean_cd
+2026-02-05 21:08:56,030 - src.utils.flood_features - INFO -   - site_name
+2026-02-05 21:08:56,030 - src.utils.flood_features - INFO -   - site_id
+2026-02-05 21:08:56,040 - src.utils.flood_features - INFO -   - year
+2026-02-05 21:08:56,046 - src.utils.flood_features - INFO -   - month
+2026-02-05 21:08:56,064 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:56,077 - src.utils.flood_features - INFO - Processing site 03374100: White River at Hazleton, IN
+2026-02-05 21:08:56,079 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:56,115 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:56,119 - src.utils.flood_features - INFO - FLOOD FEATURE ENGINEERING - Site 03374100
+2026-02-05 21:08:56,121 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:56,123 - src.utils.flood_features - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:08:56,125 - src.utils.flood_features - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_03374100.csv
+2026-02-05 21:08:56,402 - src.utils.flood_features - INFO - Loaded 4,841 cleaned records
+2026-02-05 21:08:56,404 - src.utils.flood_features - INFO - Creating temporal features...
+2026-02-05 21:08:56,406 - src.utils.flood_features - INFO - Creating statistical features...
+2026-02-05 21:08:56,485 - src.utils.flood_features - INFO - Creating trend features...
+2026-02-05 21:08:56,514 - src.utils.flood_features - INFO - Creating extreme event features...
+2026-02-05 21:08:56,604 - src.utils.flood_features - INFO - Creating target variable (window: 7 days)...
+2026-02-05 21:08:56,718 - src.utils.flood_features - INFO - Dropped 30 rows with NaN values (0.6%)
+2026-02-05 21:08:56,726 - src.utils.flood_features - INFO - Final dataset shape: (4811, 64) (4,811 samples, 64 features)
+2026-02-05 21:08:57,837 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:57,839 - src.utils.flood_features - INFO - FEATURE SUMMARY
+2026-02-05 21:08:57,839 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:57,839 - src.utils.flood_features - INFO - Total features (including target): 64
+2026-02-05 21:08:57,839 - src.utils.flood_features - INFO - Target distribution:
+2026-02-05 21:08:57,844 - src.utils.flood_features - INFO - target_flood_next_7d
+0    4407
+1     404
+2026-02-05 21:08:57,844 - src.utils.flood_features - INFO - Target positive rate: 0.084
+2026-02-05 21:08:57,844 - src.utils.flood_features - INFO - 
+Top 10 feature columns:
+2026-02-05 21:08:57,853 - src.utils.flood_features - INFO -   - date
+2026-02-05 21:08:57,855 - src.utils.flood_features - INFO -   - site_no
+2026-02-05 21:08:57,855 - src.utils.flood_features - INFO -   - discharge
+2026-02-05 21:08:57,855 - src.utils.flood_features - INFO -   - 00060_Mean_cd
+2026-02-05 21:08:57,855 - src.utils.flood_features - INFO -   - site_name
+2026-02-05 21:08:57,858 - src.utils.flood_features - INFO -   - site_id
+2026-02-05 21:08:57,858 - src.utils.flood_features - INFO -   - year
+2026-02-05 21:08:57,858 - src.utils.flood_features - INFO -   - month
+2026-02-05 21:08:57,858 - src.utils.flood_features - INFO -   - day
+2026-02-05 21:08:57,858 - src.utils.flood_features - INFO -   - day_of_week
+2026-02-05 21:08:57,874 - src.utils.flood_features - INFO - 
+============================================================
+2026-02-05 21:08:57,874 - src.utils.flood_features - INFO - FEATURE ENGINEERING COMPLETE: 5/5 sites processed successfully
+2026-02-05 21:08:57,876 - src.utils.flood_features - INFO - ============================================================
+2026-02-05 21:08:57,876 - __main__ - INFO - OK Flood feature engineering completed for 5 sites
+2026-02-05 21:08:57,876 - __main__ - INFO - 
+======================================================================
+2026-02-05 21:08:57,878 - __main__ - INFO - STEP 3: MODEL TRAINING
+2026-02-05 21:08:57,878 - __main__ - INFO - ======================================================================
+2026-02-05 21:08:57,878 - __main__ - INFO - 
+--- Training Earthquake Model ---
+2026-02-05 21:08:58,388 - src.predictors.earthquake_predictor - INFO - ============================================================
+2026-02-05 21:08:58,388 - src.predictors.earthquake_predictor - INFO - EARTHQUAKE MODEL TRAINING
+2026-02-05 21:08:58,388 - src.predictors.earthquake_predictor - INFO - ============================================================
+2026-02-05 21:08:59,790 - src.predictors.earthquake_predictor - INFO - Loaded 9,217 records from earthquake_features.csv
+2026-02-05 21:08:59,801 - src.predictors.earthquake_predictor - INFO - Using 59 NUMERIC features:
+2026-02-05 21:08:59,807 - src.predictors.earthquake_predictor - INFO -   1. latitude
+2026-02-05 21:08:59,809 - src.predictors.earthquake_predictor - INFO -   2. longitude
+2026-02-05 21:08:59,821 - src.predictors.earthquake_predictor - INFO -   3. depth
+2026-02-05 21:08:59,825 - src.predictors.earthquake_predictor - INFO -   4. mag
+2026-02-05 21:08:59,827 - src.predictors.earthquake_predictor - INFO -   5. year
+2026-02-05 21:08:59,841 - src.predictors.earthquake_predictor - INFO -   6. month
+2026-02-05 21:08:59,843 - src.predictors.earthquake_predictor - INFO -   7. day
+2026-02-05 21:08:59,865 - src.predictors.earthquake_predictor - INFO -   8. hour
+2026-02-05 21:08:59,900 - src.predictors.earthquake_predictor - INFO -   9. day_of_week
+2026-02-05 21:08:59,904 - src.predictors.earthquake_predictor - INFO -   10. day_of_year
+2026-02-05 21:08:59,906 - src.predictors.earthquake_predictor - INFO -   ... and 49 more
+2026-02-05 21:08:59,953 - src.predictors.earthquake_predictor - INFO - Train: 7,373 samples (0.076 pos rate)
+2026-02-05 21:08:59,953 - src.predictors.earthquake_predictor - INFO - Test: 1,844 samples (0.014 pos rate)
+2026-02-05 21:09:07,003 - src.predictors.earthquake_predictor - INFO - Training GradientBoosting model...
+2026-02-05 21:09:41,103 - src.predictors.earthquake_predictor - INFO - Test ROC-AUC: 0.4642
+2026-02-05 21:09:41,103 - src.predictors.earthquake_predictor - INFO - 
+Classification Report:
+2026-02-05 21:09:41,135 - src.predictors.earthquake_predictor - INFO -                       precision    recall  f1-score   support
+
+No Significant Quake       0.99      1.00      0.99      1819
+   Significant Quake       0.00      0.00      0.00        25
+
+            accuracy                           0.99      1844
+           macro avg       0.49      0.50      0.50      1844
+        weighted avg       0.97      0.99      0.98      1844
+
+2026-02-05 21:09:41,186 - __main__ - INFO - OK Earthquake model training completed successfully
+2026-02-05 21:09:41,188 - __main__ - INFO - 
+--- Training Flood Models ---
+2026-02-05 21:09:41,246 - src.predictors.flood_predictor - INFO - Training flood models for 5 sites...
+2026-02-05 21:09:41,246 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:41,246 - src.predictors.flood_predictor - INFO - Training model for site 07374000: Mississippi River at Baton Rouge, LA
+2026-02-05 21:09:41,246 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:41,270 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:41,270 - src.predictors.flood_predictor - INFO - FLOOD MODEL TRAINING - Site 07374000
+2026-02-05 21:09:41,273 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:41,273 - src.predictors.flood_predictor - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:09:41,273 - src.predictors.flood_predictor - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_features_07374000.csv
+2026-02-05 21:09:41,491 - src.predictors.flood_predictor - INFO - Loaded 5,000 records for site 07374000
+2026-02-05 21:09:41,491 - src.predictors.flood_predictor - INFO - Using 49 NUMERIC features:
+2026-02-05 21:09:41,491 - src.predictors.flood_predictor - INFO -   1. site_no
+2026-02-05 21:09:41,491 - src.predictors.flood_predictor - INFO -   2. 00065_Maximum
+2026-02-05 21:09:41,491 - src.predictors.flood_predictor - INFO -   3. 00065_Minimum
+2026-02-05 21:09:41,504 - src.predictors.flood_predictor - INFO -   4. 00065_Mean
+2026-02-05 21:09:41,504 - src.predictors.flood_predictor - INFO -   5. discharge_log
+2026-02-05 21:09:41,504 - src.predictors.flood_predictor - INFO -   6. discharge_rolling_mean_7d
+2026-02-05 21:09:41,504 - src.predictors.flood_predictor - INFO -   7. discharge_rolling_std_7d
+2026-02-05 21:09:41,504 - src.predictors.flood_predictor - INFO -   8. discharge_rolling_max_7d
+2026-02-05 21:09:41,507 - src.predictors.flood_predictor - INFO -   9. discharge_rolling_min_7d
+2026-02-05 21:09:41,507 - src.predictors.flood_predictor - INFO -   10. discharge_rolling_mean_14d
+2026-02-05 21:09:41,509 - src.predictors.flood_predictor - INFO -   ... and 39 more
+2026-02-05 21:09:41,533 - src.predictors.flood_predictor - INFO - Train set: 4,000 samples (0.072 positive rate)
+2026-02-05 21:09:41,533 - src.predictors.flood_predictor - INFO - Test set: 1,000 samples (0.000 positive rate)
+2026-02-05 21:09:41,572 - src.predictors.flood_predictor - INFO - Training RandomForestClassifier...
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - TEST SET PERFORMANCE
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - Accuracy:  0.9990
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - Precision: 0.0000
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - Recall:    0.0000
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - F1 Score:  0.0000
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - ROC AUC:   nan
+2026-02-05 21:09:42,626 - src.predictors.flood_predictor - INFO - 
+Classification Report:
+2026-02-05 21:09:42,674 - src.predictors.flood_predictor - INFO -               precision    recall  f1-score   support
+
+    No Flood       1.00      1.00      1.00      1000
+ Flood Event       0.00      0.00      0.00         0
+
+    accuracy                           1.00      1000
+   macro avg       0.50      0.50      0.50      1000
+weighted avg       1.00      1.00      1.00      1000
+
+2026-02-05 21:09:42,842 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:42,846 - src.predictors.flood_predictor - INFO - TRAINING COMPLETE!
+2026-02-05 21:09:42,849 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:42,952 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:42,985 - src.predictors.flood_predictor - INFO - Training model for site 01646500: Potomac River at Little Falls, MD
+2026-02-05 21:09:43,024 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:43,112 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:43,139 - src.predictors.flood_predictor - INFO - FLOOD MODEL TRAINING - Site 01646500
+2026-02-05 21:09:43,181 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:43,210 - src.predictors.flood_predictor - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:09:43,213 - src.predictors.flood_predictor - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_features_01646500.csv
+2026-02-05 21:09:43,590 - src.predictors.flood_predictor - INFO - Loaded 5,084 records for site 01646500
+2026-02-05 21:09:43,590 - src.predictors.flood_predictor - INFO - Using 46 NUMERIC features:
+2026-02-05 21:09:43,590 - src.predictors.flood_predictor - INFO -   1. site_no
+2026-02-05 21:09:43,590 - src.predictors.flood_predictor - INFO -   2. discharge_log
+2026-02-05 21:09:43,590 - src.predictors.flood_predictor - INFO -   3. discharge_rolling_mean_7d
+2026-02-05 21:09:43,590 - src.predictors.flood_predictor - INFO -   4. discharge_rolling_std_7d
+2026-02-05 21:09:43,590 - src.predictors.flood_predictor - INFO -   5. discharge_rolling_max_7d
+2026-02-05 21:09:43,606 - src.predictors.flood_predictor - INFO -   6. discharge_rolling_min_7d
+2026-02-05 21:09:43,606 - src.predictors.flood_predictor - INFO -   7. discharge_rolling_mean_14d
+2026-02-05 21:09:43,606 - src.predictors.flood_predictor - INFO -   8. discharge_rolling_std_14d
+2026-02-05 21:09:43,608 - src.predictors.flood_predictor - INFO -   9. discharge_rolling_max_14d
+2026-02-05 21:09:43,614 - src.predictors.flood_predictor - INFO -   10. discharge_rolling_min_14d
+2026-02-05 21:09:43,614 - src.predictors.flood_predictor - INFO -   ... and 36 more
+2026-02-05 21:09:43,643 - src.predictors.flood_predictor - INFO - Train set: 4,067 samples (0.145 positive rate)
+2026-02-05 21:09:43,643 - src.predictors.flood_predictor - INFO - Test set: 1,017 samples (0.055 positive rate)
+2026-02-05 21:09:43,694 - src.predictors.flood_predictor - INFO - Training RandomForestClassifier...
+2026-02-05 21:09:44,934 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:44,934 - src.predictors.flood_predictor - INFO - TEST SET PERFORMANCE
+2026-02-05 21:09:44,934 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:44,934 - src.predictors.flood_predictor - INFO - Accuracy:  0.9548
+2026-02-05 21:09:44,934 - src.predictors.flood_predictor - INFO - Precision: 0.6667
+2026-02-05 21:09:44,934 - src.predictors.flood_predictor - INFO - Recall:    0.3571
+2026-02-05 21:09:44,950 - src.predictors.flood_predictor - INFO - F1 Score:  0.4651
+2026-02-05 21:09:44,950 - src.predictors.flood_predictor - INFO - ROC AUC:   0.7264
+2026-02-05 21:09:44,950 - src.predictors.flood_predictor - INFO - 
+Classification Report:
+2026-02-05 21:09:44,977 - src.predictors.flood_predictor - INFO -               precision    recall  f1-score   support
+
+    No Flood       0.96      0.99      0.98       961
+ Flood Event       0.67      0.36      0.47        56
+
+    accuracy                           0.95      1017
+   macro avg       0.82      0.67      0.72      1017
+weighted avg       0.95      0.95      0.95      1017
+
+2026-02-05 21:09:45,163 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:45,165 - src.predictors.flood_predictor - INFO - TRAINING COMPLETE!
+2026-02-05 21:09:45,168 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:45,177 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:45,179 - src.predictors.flood_predictor - INFO - Training model for site 14211720: Willamette River at Portland, OR
+2026-02-05 21:09:45,181 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:45,207 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:45,207 - src.predictors.flood_predictor - INFO - FLOOD MODEL TRAINING - Site 14211720
+2026-02-05 21:09:45,207 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:45,207 - src.predictors.flood_predictor - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:09:45,212 - src.predictors.flood_predictor - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_features_14211720.csv
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO - Loaded 5,084 records for site 14211720
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO - Using 46 NUMERIC features:
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO -   1. site_no
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO -   2. discharge_log
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO -   3. discharge_rolling_mean_7d
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO -   4. discharge_rolling_std_7d
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO -   5. discharge_rolling_max_7d
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO -   6. discharge_rolling_min_7d
+2026-02-05 21:09:45,487 - src.predictors.flood_predictor - INFO -   7. discharge_rolling_mean_14d
+2026-02-05 21:09:45,496 - src.predictors.flood_predictor - INFO -   8. discharge_rolling_std_14d
+2026-02-05 21:09:45,496 - src.predictors.flood_predictor - INFO -   9. discharge_rolling_max_14d
+2026-02-05 21:09:45,498 - src.predictors.flood_predictor - INFO -   10. discharge_rolling_min_14d
+2026-02-05 21:09:45,498 - src.predictors.flood_predictor - INFO -   ... and 36 more
+2026-02-05 21:09:45,526 - src.predictors.flood_predictor - INFO - Train set: 4,067 samples (0.098 positive rate)
+2026-02-05 21:09:45,526 - src.predictors.flood_predictor - INFO - Test set: 1,017 samples (0.069 positive rate)
+2026-02-05 21:09:45,567 - src.predictors.flood_predictor - INFO - Training RandomForestClassifier...
+2026-02-05 21:09:46,900 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:46,900 - src.predictors.flood_predictor - INFO - TEST SET PERFORMANCE
+2026-02-05 21:09:46,900 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:46,900 - src.predictors.flood_predictor - INFO - Accuracy:  0.9607
+2026-02-05 21:09:46,900 - src.predictors.flood_predictor - INFO - Precision: 0.7778
+2026-02-05 21:09:46,905 - src.predictors.flood_predictor - INFO - Recall:    0.6000
+2026-02-05 21:09:46,907 - src.predictors.flood_predictor - INFO - F1 Score:  0.6774
+2026-02-05 21:09:46,910 - src.predictors.flood_predictor - INFO - ROC AUC:   0.9457
+2026-02-05 21:09:46,914 - src.predictors.flood_predictor - INFO - 
+Classification Report:
+2026-02-05 21:09:46,965 - src.predictors.flood_predictor - INFO -               precision    recall  f1-score   support
+
+    No Flood       0.97      0.99      0.98       947
+ Flood Event       0.78      0.60      0.68        70
+
+    accuracy                           0.96      1017
+   macro avg       0.87      0.79      0.83      1017
+weighted avg       0.96      0.96      0.96      1017
+
+2026-02-05 21:09:47,192 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:47,258 - src.predictors.flood_predictor - INFO - TRAINING COMPLETE!
+2026-02-05 21:09:47,288 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:47,408 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:47,438 - src.predictors.flood_predictor - INFO - Training model for site 08067000: Neches River at Evadale, TX
+2026-02-05 21:09:47,445 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:47,486 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:47,496 - src.predictors.flood_predictor - INFO - FLOOD MODEL TRAINING - Site 08067000
+2026-02-05 21:09:47,504 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:47,506 - src.predictors.flood_predictor - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:09:47,508 - src.predictors.flood_predictor - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_features_08067000.csv
+2026-02-05 21:09:47,802 - src.predictors.flood_predictor - INFO - Loaded 2,760 records for site 08067000
+2026-02-05 21:09:47,806 - src.predictors.flood_predictor - INFO - Using 47 NUMERIC features:
+2026-02-05 21:09:47,808 - src.predictors.flood_predictor - INFO -   1. site_no
+2026-02-05 21:09:47,808 - src.predictors.flood_predictor - INFO -   2. 00065_Mean
+2026-02-05 21:09:47,811 - src.predictors.flood_predictor - INFO -   3. discharge_log
+2026-02-05 21:09:47,811 - src.predictors.flood_predictor - INFO -   4. discharge_rolling_mean_7d
+2026-02-05 21:09:47,813 - src.predictors.flood_predictor - INFO -   5. discharge_rolling_std_7d
+2026-02-05 21:09:47,813 - src.predictors.flood_predictor - INFO -   6. discharge_rolling_max_7d
+2026-02-05 21:09:47,813 - src.predictors.flood_predictor - INFO -   7. discharge_rolling_min_7d
+2026-02-05 21:09:47,815 - src.predictors.flood_predictor - INFO -   8. discharge_rolling_mean_14d
+2026-02-05 21:09:47,819 - src.predictors.flood_predictor - INFO -   9. discharge_rolling_std_14d
+2026-02-05 21:09:47,823 - src.predictors.flood_predictor - INFO -   10. discharge_rolling_max_14d
+2026-02-05 21:09:47,825 - src.predictors.flood_predictor - INFO -   ... and 37 more
+2026-02-05 21:09:47,851 - src.predictors.flood_predictor - INFO - Train set: 2,208 samples (0.157 positive rate)
+2026-02-05 21:09:47,863 - src.predictors.flood_predictor - INFO - Test set: 552 samples (0.000 positive rate)
+2026-02-05 21:09:47,937 - src.predictors.flood_predictor - INFO - Training RandomForestClassifier...
+2026-02-05 21:09:54,119 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:54,214 - src.predictors.flood_predictor - INFO - TEST SET PERFORMANCE
+2026-02-05 21:09:54,335 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:54,419 - src.predictors.flood_predictor - INFO - Accuracy:  1.0000
+2026-02-05 21:09:54,515 - src.predictors.flood_predictor - INFO - Precision: 0.0000
+2026-02-05 21:09:54,648 - src.predictors.flood_predictor - INFO - Recall:    0.0000
+2026-02-05 21:09:54,759 - src.predictors.flood_predictor - INFO - F1 Score:  0.0000
+2026-02-05 21:09:54,895 - src.predictors.flood_predictor - INFO - ROC AUC:   nan
+2026-02-05 21:09:54,973 - src.predictors.flood_predictor - INFO - 
+Classification Report:
+2026-02-05 21:09:55,154 - src.predictors.flood_predictor - ERROR - Traceback (most recent call last):
+  File "C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\src\predictors\flood_predictor.py", line 377, in train_all_flood_sites
+    predictor = train_flood_model(site_id=site_id, model_type='RandomForest')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\src\predictors\flood_predictor.py", line 298, in train_flood_model
+    logger.info(classification_report(y_test, y_pred,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\woodn\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\utils\_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\woodn\AppData\Local\Programs\Python\Python312\Lib\site-packages\sklearn\metrics\_classification.py", line 3097, in classification_report
+    raise ValueError(
+ValueError: Number of classes, 1, does not match size of target_names, 2. Try specifying the labels parameter
+
+2026-02-05 21:09:55,239 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:55,334 - src.predictors.flood_predictor - INFO - Training model for site 03374100: White River at Hazleton, IN
+2026-02-05 21:09:55,414 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:55,545 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:55,647 - src.predictors.flood_predictor - INFO - FLOOD MODEL TRAINING - Site 03374100
+2026-02-05 21:09:55,737 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:55,866 - src.predictors.flood_predictor - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-05 21:09:55,987 - src.predictors.flood_predictor - INFO - Loading data from C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_features_03374100.csv
+2026-02-05 21:09:56,825 - src.predictors.flood_predictor - INFO - Loaded 4,811 records for site 03374100
+2026-02-05 21:09:56,871 - src.predictors.flood_predictor - INFO - Using 46 NUMERIC features:
+2026-02-05 21:09:56,945 - src.predictors.flood_predictor - INFO -   1. site_no
+2026-02-05 21:09:57,031 - src.predictors.flood_predictor - INFO -   2. discharge_log
+2026-02-05 21:09:57,129 - src.predictors.flood_predictor - INFO -   3. discharge_rolling_mean_7d
+2026-02-05 21:09:57,196 - src.predictors.flood_predictor - INFO -   4. discharge_rolling_std_7d
+2026-02-05 21:09:57,281 - src.predictors.flood_predictor - INFO -   5. discharge_rolling_max_7d
+2026-02-05 21:09:57,355 - src.predictors.flood_predictor - INFO -   6. discharge_rolling_min_7d
+2026-02-05 21:09:57,463 - src.predictors.flood_predictor - INFO -   7. discharge_rolling_mean_14d
+2026-02-05 21:09:57,532 - src.predictors.flood_predictor - INFO -   8. discharge_rolling_std_14d
+2026-02-05 21:09:57,570 - src.predictors.flood_predictor - INFO -   9. discharge_rolling_max_14d
+2026-02-05 21:09:57,624 - src.predictors.flood_predictor - INFO -   10. discharge_rolling_min_14d
+2026-02-05 21:09:57,676 - src.predictors.flood_predictor - INFO -   ... and 36 more
+2026-02-05 21:09:57,733 - src.predictors.flood_predictor - INFO - Train set: 3,848 samples (0.089 positive rate)
+2026-02-05 21:09:57,759 - src.predictors.flood_predictor - INFO - Test set: 963 samples (0.063 positive rate)
+2026-02-05 21:09:57,869 - src.predictors.flood_predictor - INFO - Training RandomForestClassifier...
+2026-02-05 21:09:59,434 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:59,436 - src.predictors.flood_predictor - INFO - TEST SET PERFORMANCE
+2026-02-05 21:09:59,436 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:59,438 - src.predictors.flood_predictor - INFO - Accuracy:  0.9709
+2026-02-05 21:09:59,440 - src.predictors.flood_predictor - INFO - Precision: 0.8367
+2026-02-05 21:09:59,440 - src.predictors.flood_predictor - INFO - Recall:    0.6721
+2026-02-05 21:09:59,443 - src.predictors.flood_predictor - INFO - F1 Score:  0.7455
+2026-02-05 21:09:59,446 - src.predictors.flood_predictor - INFO - ROC AUC:   0.9482
+2026-02-05 21:09:59,451 - src.predictors.flood_predictor - INFO - 
+Classification Report:
+2026-02-05 21:09:59,583 - src.predictors.flood_predictor - INFO -               precision    recall  f1-score   support
+
+    No Flood       0.98      0.99      0.98       902
+ Flood Event       0.84      0.67      0.75        61
+
+    accuracy                           0.97       963
+   macro avg       0.91      0.83      0.87       963
+weighted avg       0.97      0.97      0.97       963
+
+2026-02-05 21:09:59,899 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:59,901 - src.predictors.flood_predictor - INFO - TRAINING COMPLETE!
+2026-02-05 21:09:59,905 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:59,919 - src.predictors.flood_predictor - INFO - 
+============================================================
+2026-02-05 21:09:59,928 - src.predictors.flood_predictor - INFO - TRAINING COMPLETE: 4/5 sites
+2026-02-05 21:09:59,932 - src.predictors.flood_predictor - INFO - ============================================================
+2026-02-05 21:09:59,935 - __main__ - INFO - OK Flood model training completed for 4 sites
+2026-02-05 21:09:59,935 - __main__ - INFO - 
+======================================================================
+2026-02-05 21:09:59,935 - __main__ - INFO - OK COMPLETE PIPELINE FINISHED SUCCESSFULLY!
+2026-02-05 21:09:59,937 - __main__ - INFO - ======================================================================
+2026-02-05 21:09:59,937 - __main__ - INFO - 
+All models have been trained and saved to the 'models' directory.
+2026-02-05 21:09:59,939 - __main__ - INFO - Check the 'data' directory for evaluation plots and metrics.
+2026-02-05 21:09:59,941 - __main__ - INFO - 
+Next steps:
+2026-02-05 21:09:59,941 - __main__ - INFO -   1. Review model performance metrics in logs/
+2026-02-05 21:09:59,945 - __main__ - INFO -   2. Test predictors with src/predictors/*_predictor.py
+2026-02-05 21:09:59,947 - __main__ - INFO -   3. Integrate with alert system (src/alert_system/)
+2026-02-11 15:03:22,300 - __main__ - INFO - ======================================================================
+2026-02-11 15:03:22,308 - __main__ - INFO - STARTING COMPLETE MODEL TRAINING PIPELINE
+2026-02-11 15:03:22,310 - __main__ - INFO - ======================================================================
+2026-02-11 15:03:22,344 - __main__ - INFO - Project root: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert
+2026-02-11 15:03:22,350 - __main__ - INFO - 
+======================================================================
+2026-02-11 15:03:22,352 - __main__ - INFO - STEP 1: DATA CLEANING
+2026-02-11 15:03:22,362 - __main__ - INFO - ======================================================================
+2026-02-11 15:03:22,368 - __main__ - INFO - 
+--- Cleaning Earthquake Data ---
+2026-02-11 15:03:24,798 - src.utils.helpers - INFO - Saved cleaned earthquake data: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv (12959 records)
+2026-02-11 15:03:24,810 - __main__ - INFO - OK Earthquake data cleaning completed successfully
+2026-02-11 15:03:24,842 - __main__ - INFO - 
+--- Cleaning Flood Data ---
+2026-02-11 15:03:27,247 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_07374000.csv
+2026-02-11 15:03:28,856 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_01646500.csv
+2026-02-11 15:03:30,162 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_14211720.csv
+2026-02-11 15:03:31,377 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_08067000.csv
+2026-02-11 15:03:32,575 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_03374100.csv
+2026-02-11 15:03:32,586 - __main__ - INFO - OK Flood data cleaning completed for 5 sites
+2026-02-11 15:03:32,596 - __main__ - INFO - 
+======================================================================
+2026-02-11 15:03:32,617 - __main__ - INFO - STEP 2: FEATURE ENGINEERING
+2026-02-11 15:03:32,651 - __main__ - INFO - ======================================================================
+2026-02-11 15:03:32,657 - __main__ - INFO - 
+--- Engineering Earthquake Features ---
+2026-02-11 15:03:37,983 - __main__ - INFO - OK Earthquake feature engineering completed successfully
+2026-02-11 15:03:37,985 - __main__ - INFO - 
+--- Engineering Flood Features ---
+2026-02-11 15:03:45,826 - __main__ - INFO - OK Flood feature engineering completed for 5 sites
+2026-02-11 15:03:45,828 - __main__ - INFO - 
+======================================================================
+2026-02-11 15:03:45,830 - __main__ - INFO - STEP 3: MODEL TRAINING
+2026-02-11 15:03:45,832 - __main__ - INFO - ======================================================================
+2026-02-11 15:03:45,834 - __main__ - INFO - 
+--- Training Earthquake Model ---
+2026-02-11 15:05:47,926 - __main__ - INFO - OK Earthquake model training completed successfully
+2026-02-11 15:05:47,930 - __main__ - INFO - 
+--- Training Flood Models ---
+2026-02-11 15:06:08,606 - __main__ - INFO - OK Flood model training completed for 5 sites
+2026-02-11 15:06:08,672 - __main__ - INFO - 
+======================================================================
+2026-02-11 15:06:08,702 - __main__ - INFO - OK COMPLETE PIPELINE FINISHED SUCCESSFULLY!
+2026-02-11 15:06:08,724 - __main__ - INFO - ======================================================================
+2026-02-11 15:06:08,794 - __main__ - INFO - 
+All models have been trained and saved to the 'models' directory.
+2026-02-11 15:06:08,841 - __main__ - INFO - Check the 'data' directory for evaluation plots and metrics.
+2026-02-11 15:06:08,882 - __main__ - INFO - 
+Next steps:
+2026-02-11 15:06:08,938 - __main__ - INFO -   1. Review model performance metrics in logs/
+2026-02-11 15:06:08,986 - __main__ - INFO -   2. Test predictors with src/predictors/*_predictor.py
+2026-02-11 15:06:09,001 - __main__ - INFO -   3. Integrate with alert system (src/alert_system/)
+2026-02-11 15:09:08,244 - src.utils.helpers - INFO - Saved cleaned earthquake data: C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\earthquake_cleaned.csv (12959 records)
+2026-02-11 15:09:09,828 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_07374000.csv
+2026-02-11 15:09:12,517 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_01646500.csv
+2026-02-11 15:09:15,485 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_14211720.csv
+2026-02-11 15:09:19,067 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_08067000.csv
+2026-02-11 15:09:20,791 - src.utils.flood_cleaner - INFO - Saved to C:\Users\woodn\OneDrive\Desktop\MAPOU_LAB_CAPSTONE\earthquake-flood-alert\data\processed\flood_cleaned_03374100.csv
