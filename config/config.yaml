@@ -1,0 +1,65 @@
+earthquake:
+  min_magnitude: 2.5
+  significant_magnitude: 5.0
+  regions:
+    california:
+      name: California
+      min_lat: 32.5
+      max_lat: 42.0
+      min_lon: -124.5
+      max_lon: -114.0
+    alaska:
+      name: Alaska
+      min_lat: 51.0
+      max_lat: 71.5
+      min_lon: -180.0
+      max_lon: -129.0
+  training:
+    start_date: '2015-01-01'
+    end_date: '2024-01-01'
+    test_size: 0.3
+    random_state: 42
+flood:
+  monitoring_sites:
+    '07374000': Mississippi River at Baton Rouge, LA
+    '01646500': Potomac River at Little Falls, MD
+    '14211720': Willamette River at Portland, OR
+    '08067000': Neches River at Evadale, TX
+    '03374100': White River at Hazleton, IN
+  flood_threshold_percentile: 95
+  training:
+    start_date: '2010-01-01'
+    end_date: '2024-01-01'
+    lookback_days: 30
+    test_size: 0.3
+    random_state: 42
+alerts:
+  thresholds:
+    earthquake:
+      LOW: 0.3
+      MODERATE: 0.5
+      HIGH: 0.7
+      SEVERE: 0.9
+    flood:
+      LOW: 0.3
+      MODERATE: 0.5
+      HIGH: 0.7
+      SEVERE: 0.9
+  email:
+    enabled: true
+    smtp_server: smtp.gmail.com
+    smtp_port: 587
+  recipients:
+    - placeholder@gmail.com
+monitoring:
+  check_interval_hours: 1
+  data_retention_days: 30
+models:
+  earthquake:
+    algorithm: GradientBoosting
+    n_estimators: 200
+    max_depth: 5
+  flood:
+    algorithm: RandomForest
+    n_estimators: 100
+    max_depth: 10

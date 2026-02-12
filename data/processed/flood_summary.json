@@ -1,0 +1,14 @@
+{
+    "site_id": "07374000",
+    "site_name": "Mississippi River at Baton Rouge, LA",
+    "total_records": 5079,
+    "date_range": "2010-01-01 00:00:00+00:00 to 2024-01-01 00:00:00+00:00",
+    "discharge_mean": 580012.6009056901,
+    "discharge_median": 537000.0,
+    "discharge_max": 1430000.0,
+    "discharge_min": 131000.0,
+    "flood_threshold_95th": 1180000.0,
+    "total_flood_events": 10,
+    "missing_values_original": 0,
+    "missing_values_after_fill": 0
+}

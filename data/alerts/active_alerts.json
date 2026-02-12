@@ -1,0 +1,65 @@
+[
+  {
+    "alert_id": "EQ-20260211153612-1",
+    "hazard_type": "earthquake",
+    "level": "LOW",
+    "level_value": 1,
+    "location": "Fiji region",
+    "probability": 0.3666666666666667,
+    "message": "Low earthquake risk detected in Fiji region. Probability: 36.7%. Monitor conditions.",
+    "timestamp": "2026-02-11T15:36:12.302209",
+    "metadata": {
+      "expected_magnitude": 6.2,
+      "expected_depth": 510.944,
+      "prediction_window": "24 hours"
+    }
+  },
+  {
+    "alert_id": "FL-20260211162344-2",
+    "hazard_type": "flood",
+    "level": "MODERATE",
+    "level_value": 2,
+    "location": "Neches River at Evadale, TX",
+    "probability": 0.5259885300332026,
+    "message": "MODERATE flood risk at Neches River at Evadale, TX. Probability: 52.6%. Monitor river levels closely. Current discharge: 1,800 cfs (109% of flood threshold).",
+    "timestamp": "2026-02-11T16:23:44.843967",
+    "metadata": {
+      "site_id": "08067000",
+      "current_discharge": 1800.0,
+      "flood_threshold": 1656.5,
+      "prediction_window": "7 days"
+    }
+  },
+  {
+    "alert_id": "FL-20260211162416-2",
+    "hazard_type": "flood",
+    "level": "MODERATE",
+    "level_value": 2,
+    "location": "Neches River at Evadale, TX",
+    "probability": 0.5259885300332026,
+    "message": "MODERATE flood risk at Neches River at Evadale, TX. Probability: 52.6%. Monitor river levels closely. Current discharge: 1,800 cfs (109% of flood threshold).",
+    "timestamp": "2026-02-11T16:24:16.338939",
+    "metadata": {
+      "site_id": "08067000",
+      "current_discharge": 1800.0,
+      "flood_threshold": 1656.5,
+      "prediction_window": "7 days"
+    }
+  },
+  {
+    "alert_id": "FL-20260211165505-2",
+    "hazard_type": "flood",
+    "level": "MODERATE",
+    "level_value": 2,
+    "location": "Neches River at Evadale, TX",
+    "probability": 0.5259885300332026,
+    "message": "MODERATE flood risk at Neches River at Evadale, TX. Probability: 52.6%. Monitor river levels closely. Current discharge: 1,800 cfs (109% of flood threshold).",
+    "timestamp": "2026-02-11T16:55:05.341226",
+    "metadata": {
+      "site_id": "08067000",
+      "current_discharge": 1800.0,
+      "flood_threshold": 1656.5,
+      "prediction_window": "7 days"
+    }
+  }
+]
